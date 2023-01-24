@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Todo app</title>
+    <meta name="description" content="シンプルな機能のTodo管理アプリです。" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <link rel="shortcut icon" href="images/favicon-32x32.png">
+
+    <!-- 外部ファイルの読み込み -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/localStorage/2.0.1/localStorage.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://mariit12321.github.io/todo_app">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Todo app">
+    <meta property="og:description" content="シンプルな機能のTodo管理アプリです。">
+    <meta property="og:image" content="https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Todo app">
+    <meta name="twitter:description" content="シンプルな機能のTodo管理アプリです。">
+    <meta name="twitter:image" content="https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW">
+        
+  </head>
+  
+  <body>
+    <!-- 背景 -->
+    <div class="bg">
+      <div class="bg__img modechange"></div>
+      <div class="bg__color modechange"></div>
+    </div>
+    <!-- end：背景 -->
+
+    <!-- タイトル（TODO）・モード切り替え -->
+    <header class="header">
+      <div class="header__container wrapper">
+        <h1 class="header__title">TODO</h1>
+        <div class="header__btn modechange"></div>
+      </div>
+    </header>
+    <!-- end：タイトル（TODO）・モード切り替え -->
+
+    <!-- TODOリスト　メイン部分 -->
+    <main class="todo wrapper">
+
+      <!-- 新しいアイテムを追加 -->
+      <section class="new modechange">
+        <label class="new__container modechange">
+          <input type="checkbox" />
+          <span class="new__checkmark modechange"></span>
+        </label>
+        <input type="text" name="new-todo" class="new__item modechange" placeholder="Create a new todo...">
+      </section>
+      <!-- end：新しいアイテムを追加 -->
+
+      <!-- TODO表示 -->
+      <section class="disp modechange">
+        <ul id="disp-ul">
+        </ul>
+
+        <div class="footer">
+          <div class="footer__count">0 items left</div>
+          <div class="footer__category pc">
+            <form>
+              <input type="radio" id="all" name="category" value="all" checked><label class="footer__btn btn-all" for="all">All</label>
+              <input type="radio" id="active" name="category" value="active"><label class="footer__btn btn-active" for="active">Active</label>
+              <input type="radio" id="completed" name="category" value="completed"><label class="footer__btn btn-completed" for="completed">Completed</label>
+            </form>
+          </div>
+          <div class="footer__clear">
+            <button class="footer__clear-btn" id="clear_completed">Clear Completed</button>
+          </div>
+        </div>
+      </section>
+      <div class="footer__category sp modechange">
+        <form>
+          <input type="radio" id="all-sp" name="category" value="all" checked><label class="footer__btn-sp btn-all-sp" for="all-sp">All</label>
+          <input type="radio" id="active-sp" name="category" value="active"><label class="footer__btn-sp btn-active-sp" for="active-sp">Active</label>
+          <input type="radio" id="completed-sp" name="category" value="completed"><label class="footer__btn-sp btn-completed-sp" for="completed-sp">Completed</label>
+        </form>
+      </div>
+      <!-- end：TODO表示 -->
+
+    </main>
+    <!-- end：TODOリスト　メイン部分 -->
+    
+    <footer class="attribution modechange">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Sakiko</a>.
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
